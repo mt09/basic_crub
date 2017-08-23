@@ -36,6 +36,7 @@ class BlogsController < ApplicationController
   end
 
   def show
+    @replies = @blog.replies
   end
 
   private
