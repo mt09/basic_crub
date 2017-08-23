@@ -14,7 +14,9 @@ blog's here
         <% @blog.each do |blog| %>
             <tr>
                 <td>
-                    <%= blog.title %>
+                    <%= link_to blog_path(blog) do %>
+                        <%= blog.title %>
+                    <% end %>
                 </td>
                 <td>
                     <%= blog.content %>
