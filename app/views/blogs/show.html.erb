@@ -9,3 +9,22 @@
 <br>
 
 <%= link_to "返回", blogs_path %>
+
+<br>
+
+<%= link_to "新增留言", new_blog_reply_path(@blog) %>
+
+<table>
+    <thead>
+        <tr>
+            <th>留言</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @replies.each do |reply| %>
+            <tr>
+                <td><%= reply.reply %>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
