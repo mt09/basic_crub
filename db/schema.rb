@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20170823163926) do
   end
 
   create_table "replies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "blog_id"
-    t.text    "reply",   limit: 65535
+    t.integer  "blog_id"
+    t.text     "reply",      limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end
